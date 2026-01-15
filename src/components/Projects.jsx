@@ -4,43 +4,59 @@ import './Projects.css';
 const Projects = () => {
     const projects = [
         {
-            title: 'E-Commerce Platform',
-            description: 'A full-stack e-commerce platform with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.',
-            technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-            github: 'https://github.com/yourusername/project1',
-            demo: 'https://project1-demo.com',
-            image: 'https://via.placeholder.com/600x400/667eea/ffffff?text=E-Commerce'
+            title: 'Hệ Thống Data Warehouse - Trường ĐH Sư Phạm',
+            description: 'Hệ thống Data Warehouse phục vụ quản lý và phân tích dữ liệu cho trường Đại học Sư Phạm. Xây dựng backend API với .NET, frontend dashboard với React, và database với SQL Server.',
+            technologies: ['React', '.NET', 'SQL Server', 'RESTful API', 'Data Analysis'],
+            github: 'https://github.com/KTunges/datawarehouse',
+            demo: '#',
+            image: 'https://via.placeholder.com/600x400/667eea/ffffff?text=Data+Warehouse'
         },
         {
-            title: 'Task Management App',
-            description: 'A collaborative task management application with real-time updates. Users can create projects, assign tasks, and track progress.',
-            technologies: ['React', 'Firebase', 'Material-UI'],
-            github: 'https://github.com/yourusername/project2',
-            demo: 'https://project2-demo.com',
-            image: 'https://via.placeholder.com/600x400/764ba2/ffffff?text=Task+Manager'
+            title: 'Xe Điều Khiển Thông Minh Tự Hành',
+            description: 'Dự án lập trình nhúng xe tự hành có khả năng tránh vật cản tự động. Sử dụng Arduino/ESP32, cảm biến siêu âm và thuật toán điều khiển để xe có thể di chuyển và tránh chướng ngại vật.',
+            technologies: ['Arduino', 'C/C++', 'IoT', 'Embedded Systems', 'Sensors'],
+            github: 'https://github.com/KTunges/smart-car',
+            demo: '#',
+            image: 'https://via.placeholder.com/600x400/764ba2/ffffff?text=Smart+Car'
         },
         {
-            title: 'Weather Dashboard',
-            description: 'A beautiful weather dashboard that provides real-time weather data and forecasts using external APIs with interactive charts.',
-            technologies: ['React', 'Chart.js', 'Weather API'],
-            github: 'https://github.com/yourusername/project3',
-            demo: 'https://project3-demo.com',
-            image: 'https://via.placeholder.com/600x400/f093fb/ffffff?text=Weather+App'
+            title: 'Ứng Dụng Quản Lý với React & .NET',
+            description: 'Ứng dụng web quản lý dữ liệu với đầy đủ chức năng CRUD, authentication, và authorization. Frontend React kết nối với .NET Core API, sử dụng Entity Framework và SQL Server.',
+            technologies: ['React', '.NET Core', 'Entity Framework', 'SQL Server', 'JWT'],
+            github: 'https://github.com/KTunges/react-dotnet-app',
+            demo: '#',
+            image: 'https://via.placeholder.com/600x400/f093fb/ffffff?text=React+.NET+App'
+        },
+        {
+            title: 'Ứng Dụng Flutter Multi-Platform',
+            description: 'Ứng dụng mobile đa nền tảng (iOS & Android) với Flutter. Bao gồm các chức năng đăng nhập, danh sách dữ liệu, chi tiết, CRUD operations, và kết nối API backend.',
+            technologies: ['Flutter', 'Dart', 'RESTful API', 'State Management', 'UI/UX'],
+            github: 'https://github.com/KTunges/flutter-app',
+            demo: '#',
+            image: 'https://via.placeholder.com/600x400/4facfe/ffffff?text=Flutter+App'
+        },
+        {
+            title: 'Website PHP với MVC Architecture',
+            description: 'Website quản lý được xây dựng với PHP thuần, áp dụng mô hình MVC. Bao gồm authentication, quản lý users, CRUD operations và dashboard.',
+            technologies: ['PHP', 'MySQL', 'MVC', 'Bootstrap', 'JavaScript'],
+            github: 'https://github.com/KTunges/php-mvc',
+            demo: '#',
+            image: 'https://via.placeholder.com/600x400/3b82f6/ffffff?text=PHP+MVC'
         },
         {
             title: 'Portfolio Website',
-            description: 'A modern, responsive portfolio website built with React and deployed on GitHub Pages. Features smooth animations and dark mode.',
-            technologies: ['React', 'Vite', 'CSS3'],
-            github: 'https://github.com/yourusername/portfolio',
-            demo: 'https://yourusername.github.io',
-            image: 'https://via.placeholder.com/600x400/4facfe/ffffff?text=Portfolio'
+            description: 'Portfolio website cá nhân được xây dựng với React và Vite. Features bao gồm animations mượt mà, galaxy background effects, responsive design và dark theme.',
+            technologies: ['React', 'Vite', 'CSS3', 'Animations', 'GitHub Pages'],
+            github: 'https://github.com/KTunges/portfolio',
+            demo: 'https://ktunges.github.io',
+            image: 'https://via.placeholder.com/600x400/8b5cf6/ffffff?text=Portfolio'
         }
     ];
 
     return (
         <section id="projects" className="section projects">
             <div className="container">
-                <h2 className="section-title animate-fadeIn">My Projects</h2>
+                <h2 className="section-title animate-fadeIn">Dự Án Của Tôi</h2>
 
                 <div className="projects-grid">
                     {projects.map((project, index) => (
@@ -53,12 +69,16 @@ const Projects = () => {
                                 <img src={project.image} alt={project.title} className="project-image" />
                                 <div className="project-overlay">
                                     <div className="project-links">
-                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
-                                            <FaGithub />
-                                        </a>
-                                        <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link">
-                                            <FaExternalLinkAlt />
-                                        </a>
+                                        {project.github !== '#' && (
+                                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link" title="GitHub">
+                                                <FaGithub />
+                                            </a>
+                                        )}
+                                        {project.demo !== '#' && (
+                                            <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link" title="Live Demo">
+                                                <FaExternalLinkAlt />
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             </div>

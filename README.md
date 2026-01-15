@@ -1,6 +1,8 @@
-# 🎨 Portfolio Website
+# 🎨 Nguyễn Kim Tùng - Portfolio Website
 
-A modern, responsive portfolio website built with React and Vite. Features smooth animations, glassmorphism effects, and a beautiful gradient design.
+Portfolio website chuyên nghiệp được xây dựng với React và Vite. Có hiệu ứng galaxy animations, particle trails, và responsive design đẹp mắt.
+
+**🔗 Live Demo**: [Coming soon after deployment]
 
 ## ✨ Features
 

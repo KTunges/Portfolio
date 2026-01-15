@@ -8,3 +8,66 @@ main {
   position: relative;
   z-index: 1;
 }
+
+/* Cursor Glow Effect - Optimized */
+.cursor-glow {
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12), transparent 70%);
+  pointer-events: none;
+  translate: -50% -50%;
+  z-index: 999;
+  mix-blend-mode: screen;
+  will-change: transform;
+  /* Use GPU acceleration */
+  transform: translateZ(0);
+}
+
+/* Particle Trail Effect - Optimized */
+.particle-trail {
+  position: fixed;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.7), rgba(236, 72, 153, 0.3));
+  pointer-events: none;
+  translate: -50% -50%;
+  z-index: 998;
+  animation: particleFade 0.6s ease-out forwards;
+  box-shadow: 0 0 8px rgba(139, 92, 246, 0.5);
+  will-change: transform, opacity;
+  /* Use GPU acceleration */
+  transform: translateZ(0);
+}
+
+@keyframes particleFade {
+  0% {
+    transform: translateZ(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateZ(0) scale(0);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .cursor-glow,
+  .particle-trail {
+    display: none;
+    /* Disable on mobile for performance */
+  }
+}
+
+/* Performance optimization */
+@media (prefers-reduced-motion: reduce) {
+
+  .cursor-glow,
+  .particle-trail {
+    display: none;
+  }
+}

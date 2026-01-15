@@ -1,45 +1,62 @@
-import { FaCode, FaRocket, FaLightbulb } from 'react-icons/fa';
+import { FaCode, FaRocket, FaLightbulb, FaMobileAlt } from 'react-icons/fa';
 import './About.css';
 
 const About = () => {
     const highlights = [
         {
             icon: <FaCode />,
-            title: 'Clean Code',
-            description: 'I write maintainable and scalable code following best practices.'
+            title: 'Web Development',
+            description: 'Phát triển ứng dụng web với React, PHP, .NET và RESTful API.'
+        },
+        {
+            icon: <FaMobileAlt />,
+            title: 'Mobile Development',
+            description: 'Xây dựng ứng dụng mobile đa nền tảng với Flutter.'
         },
         {
             icon: <FaRocket />,
-            title: 'Fast Performance',
-            description: 'Optimized applications for the best user experience.'
+            title: 'Cloud & DevOps',
+            description: 'Triển khai ứng dụng trên môi trường cloud và quản lý source code với Git.'
         },
         {
             icon: <FaLightbulb />,
-            title: 'Creative Solutions',
-            description: 'Innovative approaches to solve complex problems.'
+            title: 'Problem Solving',
+            description: 'Tư duy logic, phân tích yêu cầu và giải quyết vấn đề hiệu quả.'
         }
     ];
 
     return (
         <section id="about" className="section about">
             <div className="container">
-                <h2 className="section-title animate-fadeIn">About Me</h2>
+                <h2 className="section-title animate-fadeIn">Về Tôi</h2>
 
                 <div className="about-content">
-                    <div className="about-text animate-slideInLeft">
-                        <p className="about-paragraph">
-                            Hello! I'm a passionate full-stack developer who loves building amazing web applications.
-                            My journey in web development started several years ago, and I've been constantly learning
-                            and improving my skills ever since.
-                        </p>
-                        <p className="about-paragraph">
-                            I specialize in creating responsive, user-friendly applications using modern technologies.
-                            I enjoy taking complex problems and turning them into simple, beautiful, and intuitive solutions.
-                        </p>
-                        <p className="about-paragraph">
-                            When I'm not coding, you can find me exploring new technologies, contributing to open-source
-                            projects, or sharing my knowledge with the developer community.
-                        </p>
+                    <div className="about-main">
+                        <div className="about-image-container animate-slideInLeft">
+                            <div className="image-wrapper">
+                                <img src="/profile.jpg" alt="Nguyễn Kim Tùng" className="profile-image" />
+                                <div className="image-border"></div>
+                            </div>
+                        </div>
+
+                        <div className="about-text animate-slideInRight">
+                            <p className="about-paragraph">
+                                Xin chào! Tôi là <strong>Nguyễn Kim Tùng</strong>, một lập trình viên đam mê với nền tảng về
+                                React, Flutter và phát triển ứng dụng mobile. Hiện tại đang là sinh viên năm 4 ngành
+                                <strong> Công nghệ Thông tin</strong> tại <strong>Trường Đại học Nguyễn Tất Thành</strong>.
+                            </p>
+                            <p className="about-paragraph">
+                                Tôi có kinh nghiệm phát triển ứng dụng web sử dụng <strong>React, PHP, .NET</strong> và
+                                ứng dụng mobile với <strong>Flutter</strong>. Đã tham gia nhiều dự án học tập thực tế bao gồm
+                                hệ thống <strong>Data Warehouse cho Trường ĐH Sư Phạm TP.HCM</strong>, xe điều khiển thông minh tự hành
+                                với lập trình nhúng, và các ứng dụng web/mobile đa dạng.
+                            </p>
+                            <p className="about-paragraph">
+                                Mục tiêu của tôi là trở thành <strong>Junior Frontend / Flutter Developer</strong> trong 1-2 năm tới,
+                                tham gia các dự án thực tế để nâng cao kỹ năng chuyên môn, khả năng giải quyết vấn đề
+                                và phát triển sự nghiệp lâu dài trong lĩnh vực Software Engineering.
+                            </p>
+                        </div>
                     </div>
 
                     <div className="about-highlights">
