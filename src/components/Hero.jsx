@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown, FaDownload } from 'react-icons/fa';
+import { useEffect, useState, useCallback } from 'react';
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown, FaDownload, FaFacebook, FaInstagram } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
@@ -75,6 +75,12 @@ const Hero = () => {
                         </a>
                         <a href="https://www.linkedin.com/in/kim-tung-444450377/" target="_blank" rel="noopener noreferrer" className="social-link" title="LinkedIn">
                             <FaLinkedin />
+                        </a>
+                        <a href="https://www.facebook.com/kim.tung.193905/" target="_blank" rel="noopener noreferrer" className="social-link" title="Facebook">
+                            <FaFacebook />
+                        </a>
+                        <a href="https://www.instagram.com/tetsu_jff/" target="_blank" rel="noopener noreferrer" className="social-link" title="Instagram">
+                            <FaInstagram />
                         </a>
                         <a href="mailto:kimtung5576@gmail.com" className="social-link" title="Email">
                             <FaEnvelope />

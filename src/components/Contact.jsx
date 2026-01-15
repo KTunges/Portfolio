@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt, FaHeart, FaDownload } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt, FaHeart, FaDownload, FaFacebook, FaInstagram } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -38,6 +38,18 @@ const Contact = () => {
             icon: <FaLinkedin />,
             url: 'https://www.linkedin.com/in/kim-tung-444450377/',
             color: '#0077B5'
+        },
+        {
+            name: 'Facebook',
+            icon: <FaFacebook />,
+            url: 'https://www.facebook.com/kim.tung.193905/',
+            color: '#1877F2'
+        },
+        {
+            name: 'Instagram',
+            icon: <FaInstagram />,
+            url: 'https://www.instagram.com/tetsu_jff/',
+            color: '#E4405F'
         },
         {
             name: 'Email',
