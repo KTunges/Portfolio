@@ -20,7 +20,7 @@ const Hero = () => {
     const handleDownloadCV = () => {
         // Create a link and trigger download
         const link = document.createElement('a');
-        link.href = '/Kim-Tung-CV.pdf'; // You'll need to add your CV to public folder
+        link.href = `${import.meta.env.BASE_URL}Kim-Tung-CV.pdf`;
         link.download = 'Kim-Tung-CV.pdf';
         document.body.appendChild(link);
         link.click();

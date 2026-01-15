@@ -49,7 +49,7 @@ const Contact = () => {
 
     const handleDownloadCV = () => {
         const link = document.createElement('a');
-        link.href = '/Kim-Tung-CV.pdf';
+        link.href = `${import.meta.env.BASE_URL}Kim-Tung-CV.pdf`;
         link.download = 'Kim-Tung-CV.pdf';
         document.body.appendChild(link);
         link.click();

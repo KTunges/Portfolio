@@ -34,7 +34,7 @@ const About = () => {
                     <div className="about-main">
                         <div className="about-image-container animate-slideInLeft">
                             <div className="image-wrapper">
-                                <img src="/profile.jpg" alt="Nguyễn Kim Tùng" className="profile-image" />
+                                <img src={`${import.meta.env.BASE_URL}profile.jpg`} alt="Nguyễn Kim Tùng" className="profile-image" />
                                 <div className="image-border"></div>
                             </div>
                         </div>
